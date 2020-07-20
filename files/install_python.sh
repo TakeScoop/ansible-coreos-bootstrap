@@ -17,7 +17,7 @@ if [[ -e "$tarFile" ]]; then
   tar -xjf "$tarFile"
   rm -rf "$tarFile"
 else
-  wget -O - "https://bitbucket.org/squeaky/portable-pypy/downloads/$pypyFile.tar.bz2" | tar -xjf -
+  curl -L "https://bitbucket.org/squeaky/portable-pypy/downloads/$pypyFile.tar.bz2" | tar -xjf -
 fi
 
 mv -n "$pypyFile" pypy
