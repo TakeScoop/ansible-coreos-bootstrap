@@ -27,7 +27,7 @@ mkdir -p "$PYTHON_DIR/bin/"
 
 cat > "$PYTHON_DIR/bin/python" <<EOF
 #!/bin/bash
-LD_LIBRARY_PATH=$PYTHON_DIR/pypy/lib:$LD_LIBRARY_PATH exec $PYTHON_DIR/pypy/bin/pypy "\$@"
+LD_LIBRARY_PATH=$PYTHON_DIR/pypy/lib:$LD_LIBRARY_PATH exec $PYTHON_DIR/pypy/bin/pypy3 "\$@"
 EOF
 
 chmod +x "$PYTHON_DIR/bin/python"
