@@ -10,14 +10,14 @@ mkdir -p "$PYTHON_DIR"
 cd "$PYTHON_DIR"
 
 
-pypyFile="pypy$PYTHON_VERSION-$PYPY_VERSION-linux_x86_64-portable"
+pypyFile="pypy$PYTHON_VERSION-v$PYPY_VERSION-linux64"
 tarFile="$PYTHON_DIR/$pypyFile.tar.bz2"
 
 if [[ -e "$tarFile" ]]; then
   tar -xjf "$tarFile"
   rm -rf "$tarFile"
 else
-  curl -L "https://bitbucket.org/squeaky/portable-pypy/downloads/$pypyFile.tar.bz2" | tar -xjf -
+  curl -L "https://bitbucket.org/pypy/pypy/downloads/$pypyFile.tar.bz2" | tar -xjf -
 fi
 
 mv -n "$pypyFile" pypy
